@@ -1,0 +1,57 @@
+body {
+    background-image: url("/images/wooden-bg6.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #a7968b;
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    border: 2px solid #000;
+}
+
+.press {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: 40px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    border: 1px solid #000;
+}
+
+#btnGreen {
+    background-color: green;
+    background-image: linear-gradient(green, #7FFF00);
+    top: 0;
+    left: 0;
+    border-radius: 100% 10% 10% 10%;
+}
+
+#btnRed {
+    background-color: red;
+    background-image: linear-gradient(#8B0000, red);
+    top: 0;
+    right: 0;
+    border-radius: 10% 100% 10% 10%;
+}
+
+#btnYellow {
+    background-color: yellow;
+    background-image: linear-gradient(yellow, orange);
+    bottom: 0;
+    left: 0;
+    border-radius: 10% 10% 10% 100%;
+}
+
+#btnBlue {
+    background-color: blue;
+    background-image: linear-gradient(#1E90FF, #00008B);
+    bottom: 0;
+    right: 0;
+    border-radius: 10% 10% 100% 10%;
+}
