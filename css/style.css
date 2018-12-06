@@ -1,57 +1,143 @@
 body {
-    background-image: url("/images/wooden-bg6.jpg");
+    height: 100%;
+    background-image: url("/images/marble.jpeg");
     background-size: cover;
     background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
 }
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bungee', cursive;
+    font-size: 8em;
+    color: #5f4040;
+}
+
+h2 {
+    font-family: 'Bungee', cursive;
+}
+
+h4{
+    padding: 15px;
+}
+
+/* buttons */
+
+.btn-default {
+    background-color: #b78981;
+    border: 5px solid #000;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-radius: 28px;
+    color: #000;
+    font-family: 'Bungee', cursive;
+}
+
+.btn-default:hover{
+    color: #b78981;
+    background-color: #000;
+    border-color: #000;
+}
+
+.modal-content{
+    opacity:.9;
+    padding: 10px;
+    font-family: 'Bungee', cursive;
+}
+
+/* game pad */
 
 .container {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     margin: 0 auto;
-    background-color: #a7968b;
+    background-color: #65605f;
     border-radius: 50%;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     border: 2px solid #000;
+    margin-bottom: 25px;
 }
 
-.press {
-    width: 200px;
-    height: 200px;
+.machine {
+    width: 135px;
+    height: 135px;
     position: absolute;
-    margin: 40px;
+    margin: 30px;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
     border: 1px solid #000;
+    cursor: pointer;
 }
 
-#btnGreen {
-    background-color: green;
+@media (max-width: 767px){
+    h1{
+        font-size: 4em;
+    }
+}
+
+#Green {
     background-image: linear-gradient(green, #7FFF00);
     top: 0;
     left: 0;
-    border-radius: 100% 10% 10% 10%;
+    border-radius: 100% 10% 25% 10%;
 }
 
-#btnRed {
-    background-color: red;
+#Green:active {
+  box-shadow: 5px 5px 5px 0;
+  transform: translateY(4px);
+  background-image: linear-gradient(#7aff00, #defdad);
+}
+
+#Red {
     background-image: linear-gradient(#8B0000, red);
     top: 0;
     right: 0;
-    border-radius: 10% 100% 10% 10%;
+    border-radius: 10% 100% 10% 25%;
 }
 
-#btnYellow {
-    background-color: yellow;
+#Red:active {
+  box-shadow: 5px 5px 5px 0;
+  transform: translateY(4px);
+  background-image: linear-gradient(#ff4949, #ffbdbd);
+}
+
+#Yellow {
     background-image: linear-gradient(yellow, orange);
     bottom: 0;
     left: 0;
-    border-radius: 10% 10% 10% 100%;
+    border-radius: 10% 25% 10% 100%;
 }
 
-#btnBlue {
-    background-color: blue;
+#Yellow:active {
+  box-shadow: 5px 5px 5px 0;
+  transform: translateY(4px);
+  background-image: linear-gradient(#fffdba, #fffa55);
+}
+
+#Blue {
     background-image: linear-gradient(#1E90FF, #00008B);
     bottom: 0;
     right: 0;
-    border-radius: 10% 10% 100% 10%;
+    border-radius: 25% 10% 100% 10%;
+}
+
+#Blue:active {
+  box-shadow: 5px 5px 5px 0;
+  transform: translateY(4px);
+  background-image: linear-gradient(#caffee, #1E90FF);
+}
+
+footer{
+    min-height: 50px;
+    background-color: #5f4040;
+    color: #000;
+    position: inherit;
+    bottom: 0;
+    width: 100%;
+}
+
+.pressStart{
+    background-image: linear-gradient(#caffee, #1E90FF);
 }
