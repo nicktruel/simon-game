@@ -1,30 +1,44 @@
 $(document).ready(function(){
-    
-/*  $("#Green").click(function(){
-        $(this).css("background-image", "linear-gradient(#7aff00, #defdad)");
+ 
+ $(function(){
+    $(".green").click(function(){
+        $(".green").addClass("pressGreen");
+        setTimeout(eraseClass, 150);
     });
+        function eraseClass(){
+            $(".green").removeClass("pressGreen");
+    }
+ });
     
-     
-    $("#Red").click(function(){
-        $(this).css("background-image", "linear-gradient(#ff4949, #ffbdbd)");
+ $(function(){
+    $(".red").click(function(){
+        $(".red").addClass("pressRed");
+        setTimeout(eraseClass, 150);
     });
-    
-     
-    $("#Yellow").click(function(){
-        $(this).css("background-image", "linear-gradient(#fffdba, #ffff43)");
+        function eraseClass(){
+            $(".red").removeClass("pressRed");
+    }
+ });
+ 
+ $(function(){
+    $(".yellow").click(function(){
+        $(".yellow").addClass("pressYellow");
+        setTimeout(eraseClass, 150);
     });
-    
-     
-    $("#Blue").click(function(){
-        $(this).css("background-image", "linear-gradient(#caffee, #1E90FF)");
-    }); 
-*/
-
-    $("#startButton").click(function(){
-        $(".machine").removeClass("Blue");
-        $(".machine").addClass("pressStart");
-    })
+        function eraseClass(){
+            $(".yellow").removeClass("pressYellow");
+    }
+ });
+ 
+ $(function(){
+    $(".blue").click(function(){
+        $(".blue").addClass("pressBlue");
+        setTimeout(eraseClass, 150);
+    });
+        function eraseClass(){
+            $(".blue").removeClass("pressBlue");
+    }
+ });
+ 
 
 })
-
-
