@@ -76,59 +76,6 @@ h4{
         font-size: 4em;
     }
 }
-/*
-#Green {
-    background-image: linear-gradient(green, #7FFF00);
-    top: 0;
-    left: 0;
-    border-radius: 100% 10% 25% 10%;
-}
-
-#Green:active {
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#7aff00, #defdad);
-}
-
-#Red {
-    background-image: linear-gradient(#8B0000, red);
-    top: 0;
-    right: 0;
-    border-radius: 10% 100% 10% 25%;
-}
-
-#Red:active {
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#ff4949, #ffbdbd);
-}
-
-#Yellow {
-    background-image: linear-gradient(yellow, orange);
-    bottom: 0;
-    left: 0;
-    border-radius: 10% 25% 10% 100%;
-}
-
-#Yellow:active {
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#fffdba, #fffa55);
-}
-
-#Blue {
-    background-image: linear-gradient(#1E90FF, #00008B);
-    bottom: 0;
-    right: 0;
-    border-radius: 25% 10% 100% 10%;
-}
-
-#Blue:active {
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#caffee, #1E90FF);
-}
-*/
 
 .green {
     background-image: linear-gradient(green, #7FFF00);
@@ -189,8 +136,4 @@ footer{
     position: inherit;
     bottom: 0;
     width: 100%;
-}
-
-.pressStart{
-    background-image: linear-gradient(#caffee, #1E90FF);
 }
