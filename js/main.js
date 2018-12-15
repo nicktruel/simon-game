@@ -42,7 +42,7 @@ $(document).ready(function() {
     activateRed();
    */ 
   
- $("#start-reset").click(function(){
+ $("#start-reset").click(function() {
      startSuite();
      flashLight();
  });
@@ -52,24 +52,20 @@ $(document).ready(function() {
      var i;
      for (i = 0; i < 10; i++) {
          suite.push(Math.floor(Math.random() * 4) + 1);
+ 
      }
-     console.log(suite);
  }
  
- function flashLight(){
-     var i = 0;
-     var actualLight = suite[i];
-        if (actualLight == 1) activateGreen();
-        if (actualLight == 2) activateRed();
-        if (actualLight == 3) activateYellow();
-        if (actualLight == 4) activateBlue();
-        
- }
+  function flashLight() {
+         var i = 0;
+         var actualLight = suite[i];
+         if (actualLight == 1) { activateGreen() }
+         if (actualLight == 2) { activateRed() }
+         if (actualLight == 3) { activateYellow() }
+         if (actualLight == 4) { activateBlue() }
  
+     }
  
- 
-    
-    
     
 // functions for 4 color buttons activated 
 
