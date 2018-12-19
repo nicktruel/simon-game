@@ -14,47 +14,48 @@
     
 </head>
 <body>
-    
+
     <header>
         <h1 class="text-center text-uppercase">Simon Game</h1>
     </header>
-        <p class="text-center">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#rulesModal"><h5>Rules</h5></button>
-        </p>
-        <p class="text-center">
-            <button type="button" id="start-reset" class="btn btn-default btn-lg">PRESS TO START</button>
-        </p>
 
-        <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-           <div class="modal-dialog" role="document">
-             <div class="modal-content">
-                    <h2 class="text-center">The rules are pretty simple...</h2><br>
-                    <ul>
-                        <li>The device creates a series of tones and lights.</li>
-                        <li>You have to repeat the sequence.</li>
-                        <li>If you succeed, the series becomes progressively longer.</li>
-                        <li>Once you fail the game is over.</li>
-                    </ul>
-                    <h3 class="text-center">Good Luck!!!</h3>
-             </div>
-           </div>
-       </div>
-   
+    <p class="text-center">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#rulesModal"><h5>Rules</h5></button>
+    </p>
+    <p class="text-center">
+        <button type="button" id="start-reset" class="btn btn-default btn-lg">PRESS TO START</button>
+    </p>
+
+    <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <h2 class="text-center">The rules are pretty simple...</h2><br>
+                <ul>
+                    <li>The device creates a series of tones and lights.</li>
+                    <li>You have to repeat the sequence.</li>
+                    <li>If you succeed, the series becomes progressively longer.</li>
+                    <li>Once you fail the game is over.</li>
+                </ul>
+                <h3 class="text-center">Good Luck!!!</h3>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="machine green"></div>
         <div class="machine red"></div>
         <div class="machine yellow"></div>
         <div class="machine blue"></div>
     </div>
-    
-     <div class="text-center">
-          <h2>Score: 0</h2>
-     </div>
-    
+
+    <div class="text-center" id="score">
+        <h2>Score: 0</h2>
+    </div>
+
     <footer>
         <h4 class="text-center">Created by Nick Truel 2018</h4>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

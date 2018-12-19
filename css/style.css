@@ -1,3 +1,5 @@
+
+
 body {
     height: 100%;
     background-image: url("/images/marble.jpeg");
@@ -5,6 +7,7 @@ body {
     background-repeat: repeat-y;
     margin: 0;
     padding: 0;
+
 }
 
 h1 {
@@ -13,6 +16,7 @@ h1 {
     font-family: 'Bungee', cursive;
     font-size: 8em;
     color: #5f4040;
+    text-shadow: 5px 5px #b78981;
 }
 
 h2 {
@@ -31,6 +35,7 @@ h4{
     text-transform: uppercase;
     font-size: 25px;
     border-radius: 28px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     color: #000;
     font-family: 'Bungee', cursive;
 }
@@ -74,6 +79,10 @@ h4{
 @media (max-width: 767px){
     h1{
         font-size: 4em;
+    }
+    
+    footer{
+       display: none; 
     }
 }
 
@@ -135,7 +144,8 @@ footer{
     min-height: 50px;
     background-color: #5f4040;
     color: #000;
-    position: inherit;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    
 }

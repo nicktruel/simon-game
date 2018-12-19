@@ -15,77 +15,73 @@ $(document).ready(function() {
     var wrongSound = document.createElement("audio");
     wrongSound.src = "sounds/wrongSound.mp3";
     
-    var suite = [];
-  //var userAnswer = [];
-  //var roundNumber = [];
-    
-//  Random suite    
+    var gameOver = document.createElement("audio");
+    gameOver.src = "sounds/gameover.mp3";
    
- /*   $("#start-reset").click(function() {   
-        startSuite();
-            function startSuite() {
-                var i;
-                for (i = 0; i < 10; i++) {
-                    var actualLight = suite[i];
-                    if (actualLight === 0) activateGreen();
-                    if (actualLight == 1) activateRed();
-                    if (actualLight == 2) activateYellow();
-                    if (actualLight == 3) activateBlue();
-                }
-            }
-    });
+    var suite = [];
+    var userAnswer = [];
     
-    
-    activateBlue();
-    activateGreen();
-    activateYellow();
-    activateRed();
-   */ 
   
  $("#start-reset").click(function() {
-     startSuite();
-     flashLight();
+    playGame();
  });
  
- function startSuite() {
-     suite = [];
-     var i;
-     for (i = 0; i < 10; i++) {
-         suite.push(Math.floor(Math.random() * 4) + 1);
- 
+ function playGame() {
+     userAnswer = [];
+     suite.push(Math.floor(Math.random() * 4) + 1);
+     
+     for (var i = 0; i < 10; i++) {
+        var buttonOn = suite[i];
+            if(buttonOn == 1) activateGreen();
+            if(buttonOn == 2) activateRed();
+            if(buttonOn == 3) activateYellow();
+            if(buttonOn == 4) activateBlue();
      }
  }
  
-  function flashLight() {
-         var i = 0;
-         var actualLight = suite[i];
-         if (actualLight == 1) { activateGreen() }
-         if (actualLight == 2) { activateRed() }
-         if (actualLight == 3) { activateYellow() }
-         if (actualLight == 4) { activateBlue() }
- 
+ function compareAnswer(){
+     var currentAnswerIndex = userAnswer.length -1;
+     var currentAnswer = userAnswer[currentAnswerIndex];
+     if(currentAnswer != suite[currentAnswerIndex]){
+         endOfGame();
+     }else if(currentAnswerIndex == suite.length -1){
+         playGame();
      }
+ }
  
+ function endOfGame(){
+     gameOver.play();
+     greenSound.pause();
+     redSound.pause();
+     yellowSound.pause();
+     blueSound.pause();
+     $("#score").html("<h2>You Loose!!!</h2>")
+ }
+
     
 // functions for 4 color buttons activated 
 
     function activateGreen() {
-        $(".green").addClass("pressGreen"), greenSound.play();
+        greenSound.play();
+        $(".green").addClass("pressGreen"),
         setTimeout(function eraseClass() { $(".green").removeClass("pressGreen") }, 150);
     }
 
     function activateRed() {
-        $(".red").addClass("pressRed"), redSound.play();
+        redSound.play();
+        $(".red").addClass("pressRed"), 
         setTimeout(function eraseClass() { $(".red").removeClass("pressRed") }, 150);
     }
 
     function activateYellow() {
-        $(".yellow").addClass("pressYellow"), yellowSound.play();
+        yellowSound.play();
+        $(".yellow").addClass("pressYellow"),
         setTimeout(function eraseClass() { $(".yellow").removeClass("pressYellow") }, 150);
     }
 
     function activateBlue() {
-        $(".blue").addClass("pressBlue"), blueSound.play();
+        blueSound.play();
+        $(".blue").addClass("pressBlue"),
         setTimeout(function eraseClass() { $(".blue").removeClass("pressBlue") }, 150);
     }
 
@@ -94,24 +90,32 @@ $(document).ready(function() {
     $(function() {
         $(".green").mousedown(function() {
             activateGreen();
+            userAnswer.push(1);
+            compareAnswer();
         });
     });
 
     $(function() {
         $(".red").mousedown(function() {
             activateRed();
+            userAnswer.push(2);
+            compareAnswer();
         });
     });
 
     $(function() {
         $(".yellow").mousedown(function() {
             activateYellow();
+            userAnswer.push(3);
+            compareAnswer();
         });
     });
 
     $(function() {
         $(".blue").mousedown(function() {
             activateBlue();
+            userAnswer.push(4);
+            compareAnswer();
         });
     });
 
