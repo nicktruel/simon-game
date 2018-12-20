@@ -21,17 +21,16 @@ $(document).ready(function() {
     var winSound = document.createElement("audio");
     winSound.src = "sounds/youwin.mp3";
    
-    document.getElementById("count").innerHTML = "0";
-   
     var suite = [];
     var userAnswer = [];
     var round = 0;
+    
     
   
  $("#start").click(function() {
     suite = [];
     round = 0;
-    setTimeout(function (){playGame();}, 300);
+    playGame();
     $(this).text("PLAYING");
     $("#message").text("");
  });
@@ -41,12 +40,20 @@ $(document).ready(function() {
      suite.push(Math.floor(Math.random() * 4) + 1);
      round += 1;
      document.getElementById("count").innerHTML = round;
-     for (var i = 0; i < 10; i++) {
+     for (var i = 0; i < 3; i++) {
         var buttonOn = suite[i];
-            if(buttonOn == 1) activateGreen();
-            if(buttonOn == 2) activateRed();
-            if(buttonOn == 3) activateYellow();
-            if(buttonOn == 4) activateBlue();
+            if(buttonOn == 1) {
+                setTimeout(function (){activateGreen()}, 800 * (i + 1));
+            }
+            if(buttonOn == 2) {
+                setTimeout(function (){activateRed()}, 800 * (i + 1));
+            }
+            if(buttonOn == 3) {
+                setTimeout(function (){activateYellow()}, 800 * (i + 1));
+            }
+            if(buttonOn == 4) {
+                setTimeout(function (){activateBlue()}, 800 * (i + 1));
+            }
      }
  }
  
@@ -57,12 +64,13 @@ $(document).ready(function() {
          looseGame();
      } if(currentAnswerIndex == suite.length -1){
          playGame();
-     } if(suite.length == 11){
+     } if(suite.length == 4){
           winGame();
      }
  }
  
  function looseGame(){
+     suite = [];
      gameOver.play();
      greenSound.pause();
      redSound.pause();
@@ -73,12 +81,13 @@ $(document).ready(function() {
  }
  
  function winGame(){
+     suite = [];
      $("#message").append("<h2>YOU WIN!!!</h2>");
      winSound.play();
-     suite = [];
+     activateGreen(),activateRed(),activateYellow(),activateBlue();
+     greenSound.pause(),redSound.pause(),yellowSound.pause(),blueSound.pause();
  }
 
-    
 // functions for 4 color buttons activated 
 
     function activateGreen() {
