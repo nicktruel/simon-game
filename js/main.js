@@ -17,19 +17,30 @@ $(document).ready(function() {
     
     var gameOver = document.createElement("audio");
     gameOver.src = "sounds/gameover.mp3";
+    
+    var winSound = document.createElement("audio");
+    winSound.src = "sounds/youwin.mp3";
+   
+    document.getElementById("count").innerHTML = "0";
    
     var suite = [];
     var userAnswer = [];
+    var round = 0;
     
   
- $("#start-reset").click(function() {
-    playGame();
+ $("#start").click(function() {
+    suite = [];
+    round = 0;
+    setTimeout(function (){playGame();}, 300);
+    $(this).text("PLAYING");
+    $("#message").text("");
  });
  
  function playGame() {
      userAnswer = [];
      suite.push(Math.floor(Math.random() * 4) + 1);
-     
+     round += 1;
+     document.getElementById("count").innerHTML = round;
      for (var i = 0; i < 10; i++) {
         var buttonOn = suite[i];
             if(buttonOn == 1) activateGreen();
@@ -42,20 +53,29 @@ $(document).ready(function() {
  function compareAnswer(){
      var currentAnswerIndex = userAnswer.length -1;
      var currentAnswer = userAnswer[currentAnswerIndex];
-     if(currentAnswer != suite[currentAnswerIndex]){
-         endOfGame();
-     }else if(currentAnswerIndex == suite.length -1){
+       if(currentAnswer != suite[currentAnswerIndex]){
+         looseGame();
+     } if(currentAnswerIndex == suite.length -1){
          playGame();
+     } if(suite.length == 11){
+          winGame();
      }
  }
  
- function endOfGame(){
+ function looseGame(){
      gameOver.play();
      greenSound.pause();
      redSound.pause();
      yellowSound.pause();
      blueSound.pause();
-     $("#score").html("<h2>You Loose!!!</h2>")
+     $("#message").append("<h2>Try Again!!!</h2>");
+     $("#start").text("PRESS TO START");
+ }
+ 
+ function winGame(){
+     $("#message").append("<h2>YOU WIN!!!</h2>");
+     winSound.play();
+     suite = [];
  }
 
     
