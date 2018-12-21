@@ -24,15 +24,13 @@ $(document).ready(function() {
     var suite = [];
     var userAnswer = [];
     var round = 0;
-    
-    
-  
- $("#start").click(function() {
-    suite = [];
-    round = 0;
-    playGame();
-    $(this).text("PLAYING");
-    $("#message").text("");
+
+ $("#start").click(function turnOn() {
+       suite = [];
+       round = 0;
+       playGame();
+       $(this).text("playing");
+       $("#message").text("");
  });
  
  function playGame() {
@@ -40,7 +38,7 @@ $(document).ready(function() {
      suite.push(Math.floor(Math.random() * 4) + 1);
      round += 1;
      document.getElementById("count").innerHTML = round;
-     for (var i = 0; i < 3; i++) {
+     for (var i = 0; i < 2; i++) {
         var buttonOn = suite[i];
             if(buttonOn == 1) {
                 setTimeout(function (){activateGreen()}, 800 * (i + 1));
@@ -57,35 +55,37 @@ $(document).ready(function() {
      }
  }
  
- function compareAnswer(){
-     var currentAnswerIndex = userAnswer.length -1;
+ function compareAnswer() {
+     var currentAnswerIndex = userAnswer.length - 1;
      var currentAnswer = userAnswer[currentAnswerIndex];
-       if(currentAnswer != suite[currentAnswerIndex]){
+     
+     if (currentAnswer != suite[currentAnswerIndex]) {
          looseGame();
-     } if(currentAnswerIndex == suite.length -1){
+     }
+     if (currentAnswerIndex == suite.length - 1) {
          playGame();
-     } if(suite.length == 4){
-          winGame();
+     }
+     if (suite.length == 3) {
+         winGame();
      }
  }
  
+
  function looseGame(){
      suite = [];
      gameOver.play();
-     greenSound.pause();
-     redSound.pause();
-     yellowSound.pause();
-     blueSound.pause();
-     $("#message").append("<h2>Try Again!!!</h2>");
-     $("#start").text("PRESS TO START");
+     greenSound.pause(), redSound.pause(), yellowSound.pause(), blueSound.pause();
+     $("#message").append("<h2>try again!!!</h2>");
+     $("#start").text("press to start");
  }
  
  function winGame(){
-     suite = [];
-     $("#message").append("<h2>YOU WIN!!!</h2>");
      winSound.play();
-     activateGreen(),activateRed(),activateYellow(),activateBlue();
-     greenSound.pause(),redSound.pause(),yellowSound.pause(),blueSound.pause();
+     activateGreen(), activateRed(), activateYellow(), activateBlue();
+     greenSound.pause(), redSound.pause(), yellowSound.pause(), blueSound.pause();
+     $("#message").append("<h2>you win!!!</h2>");
+     $("#start").text("play again");
+     $(".green").addClass("pressGreen"), $(".red").addClass("pressRed"), $(".yellow").addClass("pressYellow"), $(".blue").addClass("pressBlue");
  }
 
 // functions for 4 color buttons activated 

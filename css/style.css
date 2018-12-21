@@ -27,6 +27,11 @@ h4{
     padding: 15px;
 }
 
+#message{
+    font-family: 'Bungee', cursive;
+    margin-bottom: 200px;
+}
+
 /* buttons */
 
 .btn-default {
@@ -79,10 +84,6 @@ h4{
 @media (max-width: 767px){
     h1{
         font-size: 4em;
-    }
-    
-    footer{
-       display: none; 
     }
 }
 
@@ -138,14 +139,16 @@ h4{
     background-image: linear-gradient(#caffee, #1E90FF);
 }
 
+
 /* footer */
 
 footer{
     min-height: 50px;
     background-color: #5f4040;
     color: #000;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    margin-top: 100px;
     
 }
