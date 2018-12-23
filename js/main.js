@@ -38,7 +38,7 @@ $(document).ready(function() {
      suite.push(Math.floor(Math.random() * 4) + 1);
      round += 1;
      document.getElementById("count").innerHTML = round;
-     for (var i = 0; i < 2; i++) {
+     for (var i = 0; i < 10; i++) {
         var buttonOn = suite[i];
             if(buttonOn == 1) {
                 setTimeout(function (){activateGreen()}, 800 * (i + 1));
@@ -65,7 +65,7 @@ $(document).ready(function() {
      if (currentAnswerIndex == suite.length - 1) {
          playGame();
      }
-     if (suite.length == 3) {
+     if (suite.length == 11) {
          winGame();
      }
  }
