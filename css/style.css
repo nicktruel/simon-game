@@ -87,6 +87,13 @@ h4{
     }
 }
 
+.offGreen{
+    background-image: linear-gradient(#397939, #c2d8ab);
+    top: 0;
+    left: 0;
+    border-radius: 100% 10% 25% 10%;
+}
+
 .green {
     background-image: linear-gradient(green, #7FFF00);
     top: 0;
@@ -95,9 +102,16 @@ h4{
 }
 
 .pressGreen {
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#7aff00, #defdad);
+    box-shadow: 5px 5px 5px 0;
+    transform: translateY(4px);
+    background-image: linear-gradient(#7aff00, #defdad);
+}
+
+.offRed{
+    background-image: linear-gradient(#773939, #f19999);
+    top: 0;
+    right: 0;
+    border-radius: 10% 100% 10% 25%;
 }
 
 .red {
@@ -108,9 +122,16 @@ h4{
 }
 
 .pressRed{
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#ff4949, #ffbdbd);
+    box-shadow: 5px 5px 5px 0;
+    transform: translateY(4px);
+    background-image: linear-gradient(#ff4949, #ffbdbd);
+}
+
+.offYellow{
+    background-image: linear-gradient(#f5f5a5, #e0ab47);
+    bottom: 0;
+    left: 0;
+    border-radius: 10% 25% 10% 100%;
 }
 
 .yellow {
@@ -121,9 +142,16 @@ h4{
 }
 
 .pressYellow {
-  box-shadow: 5px 5px 5px 0;
-  transform: translateY(4px);
-  background-image: linear-gradient(#fffdba, #fffa55);
+    box-shadow: 5px 5px 5px 0;
+    transform: translateY(4px);
+    background-image: linear-gradient(#fffdba, #fffa55);
+}
+
+.offBlue{
+    background-image: linear-gradient(#a3ccf3, #38387b);
+    bottom: 0;
+    right: 0;
+    border-radius: 25% 10% 100% 10%;
 }
 
 .blue {

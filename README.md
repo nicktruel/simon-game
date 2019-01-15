@@ -1,18 +1,22 @@
+# Simon Game
+Built by **_Nicolas Truel_**
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+* [Simon Game](https://simon-game-nicktruel.c9users.io/index.html)
+---
+## UX
 
+## Features
 
-Hi there! Welcome to Cloud9 IDE!
+## Technologies
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+## Testing
 
-Happy coding!
-The Cloud9 IDE team
+## Deployment
+
+## Credits
+
+#### Content
+
+#### Media
+
+#### Acknowledgements

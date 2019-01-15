@@ -28,17 +28,22 @@ $(document).ready(function() {
  $("#start").click(function turnOn() {
        suite = [];
        round = 0;
+       $(".offGreen").addClass("green").removeClass("offGreen");
+       $(".offRed").addClass("red").removeClass("offRed");
+       $(".offYellow").addClass("yellow").removeClass("offYellow");
+       $(".offBlue").addClass("blue").removeClass("offBlue");
        playGame();
        $(this).text("playing");
        $("#message").text("");
  });
+ 
  
  function playGame() {
      userAnswer = [];
      suite.push(Math.floor(Math.random() * 4) + 1);
      round += 1;
      document.getElementById("count").innerHTML = round;
-     for (var i = 0; i < 10; i++) {
+     for (var i = 0; i < 2; i++) {
         var buttonOn = suite[i];
             if(buttonOn == 1) {
                 setTimeout(function (){activateGreen()}, 800 * (i + 1));
@@ -65,7 +70,7 @@ $(document).ready(function() {
      if (currentAnswerIndex == suite.length - 1) {
          playGame();
      }
-     if (suite.length == 11) {
+     if (suite.length == 3) {
          winGame();
      }
  }
@@ -117,7 +122,7 @@ $(document).ready(function() {
 // When color buttons are pressed
 
     $(function() {
-        $(".green").mousedown(function() {
+        $(".offGreen").mousedown(function() {
             activateGreen();
             userAnswer.push(1);
             compareAnswer();
@@ -125,7 +130,7 @@ $(document).ready(function() {
     });
 
     $(function() {
-        $(".red").mousedown(function() {
+        $(".offRed").mousedown(function() {
             activateRed();
             userAnswer.push(2);
             compareAnswer();
@@ -133,7 +138,7 @@ $(document).ready(function() {
     });
 
     $(function() {
-        $(".yellow").mousedown(function() {
+        $(".offYellow").mousedown(function() {
             activateYellow();
             userAnswer.push(3);
             compareAnswer();
@@ -141,7 +146,7 @@ $(document).ready(function() {
     });
 
     $(function() {
-        $(".blue").mousedown(function() {
+        $(".offBlue").mousedown(function() {
             activateBlue();
             userAnswer.push(4);
             compareAnswer();
