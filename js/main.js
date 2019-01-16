@@ -46,16 +46,16 @@ $(document).ready(function() {
      for (var i = 0; i < 2; i++) {
         var buttonOn = suite[i];
             if(buttonOn == 1) {
-                setTimeout(function (){activateGreen()}, 800 * (i + 1));
+                setTimeout(function (){activateGreen()}, 1000 * (i + 1));
             }
             if(buttonOn == 2) {
-                setTimeout(function (){activateRed()}, 800 * (i + 1));
+                setTimeout(function (){activateRed()}, 1000 * (i + 1));
             }
             if(buttonOn == 3) {
-                setTimeout(function (){activateYellow()}, 800 * (i + 1));
+                setTimeout(function (){activateYellow()}, 1000 * (i + 1));
             }
             if(buttonOn == 4) {
-                setTimeout(function (){activateBlue()}, 800 * (i + 1));
+                setTimeout(function (){activateBlue()}, 1000 * (i + 1));
             }
      }
  }
