@@ -75,19 +75,44 @@ h4{
     width: 135px;
     height: 135px;
     position: absolute;
-    margin: 30px;
+    margin: 32px;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
     border: 1px solid #000;
     cursor: pointer;
 }
 
 @media (max-width: 767px){
+    .container{
+        width: 270px;
+        height: 270px;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+    .machine{
+        width: 105px;
+        height: 105px;
+        margin: 23px;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    }
     h1{
-        font-size: 4em;
+        font-size: 3em;
+    }
+    #start{
+        font-size: 1em;
+        border: 2px solid #000;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+    #rules{
+        font-size: 0.8em;
+        border: 2px solid #000;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+    h4{
+        padding: 8px;
+        font-size: 15px;
     }
 }
 
-.offGreen{
+.offGreen, .goGreen{
     background-image: linear-gradient(#397939, #c2d8ab);
     top: 0;
     left: 0;
@@ -107,7 +132,7 @@ h4{
     background-image: linear-gradient(#7aff00, #defdad);
 }
 
-.offRed{
+.offRed, .goRed{
     background-image: linear-gradient(#773939, #f19999);
     top: 0;
     right: 0;
@@ -127,7 +152,7 @@ h4{
     background-image: linear-gradient(#ff4949, #ffbdbd);
 }
 
-.offYellow{
+.offYellow, .goYellow{
     background-image: linear-gradient(#f5f5a5, #e0ab47);
     bottom: 0;
     left: 0;
@@ -147,7 +172,7 @@ h4{
     background-image: linear-gradient(#fffdba, #fffa55);
 }
 
-.offBlue{
+.offBlue, .goBlue{
     background-image: linear-gradient(#a3ccf3, #38387b);
     bottom: 0;
     right: 0;

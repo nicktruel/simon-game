@@ -26,12 +26,12 @@ $(document).ready(function() {
     var round = 0;
 
  $("#start").click(function turnOn() {
+       $(".offGreen").removeClass("offGreen").addClass("green");
+       $(".offRed").removeClass("offRed").addClass("red");
+       $(".offYellow").removeClass("offYellow").addClass("yellow");
+       $(".offBlue").removeClass("offBlue").addClass("blue");
        suite = [];
        round = 0;
-       $(".offGreen").addClass("green").removeClass("offGreen");
-       $(".offRed").addClass("red").removeClass("offRed");
-       $(".offYellow").addClass("yellow").removeClass("offYellow");
-       $(".offBlue").addClass("blue").removeClass("offBlue");
        playGame();
        $(this).text("playing");
        $("#message").text("");
@@ -85,12 +85,16 @@ $(document).ready(function() {
  }
  
  function winGame(){
+     setTimeout(function(){
+        window.location.replace("/gameWin.html");
+     }, 500);
+     /*
      winSound.play();
      activateGreen(), activateRed(), activateYellow(), activateBlue();
      greenSound.pause(), redSound.pause(), yellowSound.pause(), blueSound.pause();
      $("#message").append("<h2>you win!!!</h2>");
      $("#start").text("play again");
-     $(".green").addClass("pressGreen"), $(".red").addClass("pressRed"), $(".yellow").addClass("pressYellow"), $(".blue").addClass("pressBlue");
+     */
  }
 
 // functions for 4 color buttons activated 

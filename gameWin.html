@@ -20,10 +20,10 @@
     </header>
 
     <p class="text-center">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#rulesModal"><h5>Rules</h5></button>
+        <button type="button" id="rules" class="btn btn-default" data-toggle="modal" data-target="#rulesModal">Rules</button>
     </p>
     <p class="text-center">
-        <button type="button" id="start" class="btn btn-default btn-lg">PRESS TO START</button>
+        <a href="index.html"><button type="button" id="start" class="btn btn-default btn-lg">PLAY AGAIN??</button></a>
     </p>
 
     <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -42,14 +42,14 @@
     </div>
 
     <div class="container">
-        <div class="machine offGreen"></div>
-        <div class="machine offRed"></div>
-        <div class="machine offYellow"></div>
-        <div class="machine offBlue"></div>
+        <div class="machine goGreen"></div>
+        <div class="machine goRed"></div>
+        <div class="machine goYellow"></div>
+        <div class="machine goBlue"></div>
     </div>
 
     <div class="text-center" id="score">
-        <h2>ROUND:<p id="count">0</p></h2>
+        <h2>CONGRATULATIONS!!!<p id="count">YOU BEAT SIMON</p></h2>
         <p class="text-center" id="message"></p>
     </div>
     
