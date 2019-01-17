@@ -52,7 +52,7 @@ h4{
 }
 
 .btn-default:hover{
-    color: #000;
+    color: #444040;
     background-color: #b78981;
     border-color: #000;
 }
@@ -120,7 +120,7 @@ h4{
 
 /* Green button x3 states*/
 
-.offGreen, .goGreen{
+.offGreen{
     background-image: linear-gradient(#397939, #c2d8ab);
     top: 0;
     left: 0;
@@ -135,6 +135,9 @@ h4{
 }
 
 .pressGreen {
+    top: 0;
+    left: 0;
+    border-radius: 100% 10% 25% 10%;
     box-shadow: 5px 5px 5px 0;
     transform: translateY(4px);
     background-image: linear-gradient(#7aff00, #defdad);
@@ -142,7 +145,7 @@ h4{
 
 /* Red button x3 states*/
 
-.offRed, .goRed{
+.offRed{
     background-image: linear-gradient(#773939, #f19999);
     top: 0;
     right: 0;
@@ -157,6 +160,9 @@ h4{
 }
 
 .pressRed{
+    top: 0;
+    right: 0;
+    border-radius: 10% 100% 10% 25%;
     box-shadow: 5px 5px 5px 0;
     transform: translateY(4px);
     background-image: linear-gradient(#ff4949, #ffbdbd);
@@ -164,7 +170,7 @@ h4{
 
 /* Yellow button x3 states*/
 
-.offYellow, .goYellow{
+.offYellow{
     background-image: linear-gradient(#f5f5a5, #e0ab47);
     bottom: 0;
     left: 0;
@@ -179,6 +185,9 @@ h4{
 }
 
 .pressYellow {
+    bottom: 0;
+    left: 0;
+    border-radius: 10% 25% 10% 100%;
     box-shadow: 5px 5px 5px 0;
     transform: translateY(4px);
     background-image: linear-gradient(#fffdba, #fffa55);
@@ -186,7 +195,7 @@ h4{
 
 /*Blue button x3 states*/
 
-.offBlue, .goBlue{
+.offBlue{
     background-image: linear-gradient(#a3ccf3, #38387b);
     bottom: 0;
     right: 0;
@@ -201,11 +210,13 @@ h4{
 }
 
 .pressBlue {
+    bottom: 0;
+    right: 0;
+    border-radius: 25% 10% 100% 10%;
     box-shadow: 5px 5px 5px 0;
     transform: translateY(4px);
     background-image: linear-gradient(#caffee, #1E90FF);
 }
-
 
 /* footer */
 
@@ -217,5 +228,4 @@ footer{
     bottom: 0;
     width: 100%;
     margin-top: 100px;
-    
 }

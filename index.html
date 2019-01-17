@@ -15,9 +15,13 @@
 </head>
 <body>
 
+<!-- Title -->
+
     <header>
         <h1 class="text-center text-uppercase">Simon Game</h1>
     </header>
+
+<!-- Buttons -->
 
     <p class="text-center">
         <button type="button" id="rules" class="btn btn-default" data-toggle="modal" data-target="#rulesModal">Rules</button>
@@ -25,6 +29,8 @@
     <p class="text-center">
         <button type="button" id="start" class="btn btn-default btn-lg">PRESS TO START</button>
     </p>
+    
+<!-- Modal -->
 
     <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -34,12 +40,15 @@
                     <li>The device creates a series of tones and lights.</li>
                     <li>You have to repeat the sequence.</li>
                     <li>If you succeed, the series becomes progressively longer.</li>
+                    <li>Get to 10 rounds to beat Simon</li>
                     <li>Once you fail the game is over.</li>
                 </ul>
                 <h3 class="text-center">Good Luck!!!</h3>
             </div>
         </div>
     </div>
+    
+<!-- Game Pad -->
 
     <div class="container">
         <div class="machine offGreen"></div>
@@ -48,10 +57,14 @@
         <div class="machine offBlue"></div>
     </div>
 
+<!-- Rounds and messages -->
+
     <div class="text-center" id="score">
         <h2>ROUND:<p id="count">0</p></h2>
         <p class="text-center" id="message"></p>
     </div>
+
+<!-- Footer -->
     
     <footer>
         <h4 class="text-center">Created by Nick Truel 2018</h4>

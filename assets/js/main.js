@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-// Sound and other variables
+// Sound variables
 
     var greenSound = document.createElement("audio");
     greenSound.src = "assets/sounds/simonSound1.mp3";
@@ -19,7 +19,9 @@ $(document).ready(function() {
     
     var winSound = document.createElement("audio");
     winSound.src = "assets/sounds/youwin.mp3";
-   
+
+// Variables counting suites, user answers and rounds
+
     var suite = [];
     var userAnswer = [];
     var round = 0;
@@ -63,7 +65,7 @@ $(document).ready(function() {
  }
  
 /* Function to compare user answer with random loop
-   3 choices, win game, game over or loop carries on*/
+   3 choices, win game, game over or loop carries on */
  
  function compareAnswer() {
      var currentAnswerIndex = userAnswer.length - 1;
@@ -131,7 +133,7 @@ $(document).ready(function() {
         setTimeout(function eraseClass() { $(".blue").removeClass("pressBlue") }, 150);
     }
 
-// Function for when color buttons are pressed
+// Function for when game pad buttons are pressed
 
     $(function() {
         $(".offGreen").mousedown(function() {
