@@ -1,29 +1,30 @@
 $(document).ready(function() {
 
+// Sound and other variables
+
     var greenSound = document.createElement("audio");
-    greenSound.src = "sounds/simonSound1.mp3";
+    greenSound.src = "assets/sounds/simonSound1.mp3";
 
     var redSound = document.createElement("audio");
-    redSound.src = "sounds/simonSound2.mp3";
+    redSound.src = "assets/sounds/simonSound2.mp3";
 
     var yellowSound = document.createElement("audio");
-    yellowSound.src = "sounds/simonSound3.mp3";
+    yellowSound.src = "assets/sounds/simonSound3.mp3";
 
     var blueSound = document.createElement("audio");
-    blueSound.src = "sounds/simonSound4.mp3";
+    blueSound.src = "assets/sounds/simonSound4.mp3";
 
-    var wrongSound = document.createElement("audio");
-    wrongSound.src = "sounds/wrongSound.mp3";
-    
     var gameOver = document.createElement("audio");
-    gameOver.src = "sounds/gameover.mp3";
+    gameOver.src = "assets/sounds/gameover.mp3";
     
     var winSound = document.createElement("audio");
-    winSound.src = "sounds/youwin.mp3";
+    winSound.src = "assets/sounds/youwin.mp3";
    
     var suite = [];
     var userAnswer = [];
     var round = 0;
+
+// function when start button is pressed (buttons activate and game start)
 
  $("#start").click(function turnOn() {
        $(".offGreen").removeClass("offGreen").addClass("green");
@@ -37,6 +38,7 @@ $(document).ready(function() {
        $("#message").text("");
  });
  
+// PlayGame function, random loop generated, buttons flashing with loop
  
  function playGame() {
      userAnswer = [];
@@ -60,6 +62,9 @@ $(document).ready(function() {
      }
  }
  
+/* Function to compare user answer with random loop
+   3 choices, win game, game over or loop carries on*/
+ 
  function compareAnswer() {
      var currentAnswerIndex = userAnswer.length - 1;
      var currentAnswer = userAnswer[currentAnswerIndex];
@@ -75,6 +80,7 @@ $(document).ready(function() {
      }
  }
  
+// Game over function, play sound, reset counter and changes messages
 
  function looseGame(){
      suite = [];
@@ -83,6 +89,8 @@ $(document).ready(function() {
      $("#message").append("<h2>try again!!!</h2>");
      $("#start").text("press to start");
  }
+ 
+// Win game function, redirects to gameWin page with slight delay
  
  function winGame(){
      setTimeout(function(){
@@ -123,7 +131,7 @@ $(document).ready(function() {
         setTimeout(function eraseClass() { $(".blue").removeClass("pressBlue") }, 150);
     }
 
-// When color buttons are pressed
+// Function for when color buttons are pressed
 
     $(function() {
         $(".offGreen").mousedown(function() {

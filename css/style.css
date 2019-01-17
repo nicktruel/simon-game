@@ -2,7 +2,7 @@
 
 body {
     height: 100%;
-    background-image: url("/images/marble.jpeg");
+    background-image: url("/assets/images/marble.jpeg");
     background-size: cover;
     background-repeat: repeat-y;
     margin: 0;
@@ -32,7 +32,7 @@ h4{
     margin-bottom: 200px;
 }
 
-/* buttons */
+/* rules and start buttons */
 
 .btn-default {
     background-color: #b78981;
@@ -45,9 +45,15 @@ h4{
     font-family: 'Bungee', cursive;
 }
 
+.btn-default:focus{
+    color: #333;
+    background-color: #b78981;
+    border: 5px solid #000;
+}
+
 .btn-default:hover{
-    color: #b78981;
-    background-color: #000;
+    color: #000;
+    background-color: #b78981;
     border-color: #000;
 }
 
@@ -112,6 +118,8 @@ h4{
     }
 }
 
+/* Green button x3 states*/
+
 .offGreen, .goGreen{
     background-image: linear-gradient(#397939, #c2d8ab);
     top: 0;
@@ -131,6 +139,8 @@ h4{
     transform: translateY(4px);
     background-image: linear-gradient(#7aff00, #defdad);
 }
+
+/* Red button x3 states*/
 
 .offRed, .goRed{
     background-image: linear-gradient(#773939, #f19999);
@@ -152,6 +162,8 @@ h4{
     background-image: linear-gradient(#ff4949, #ffbdbd);
 }
 
+/* Yellow button x3 states*/
+
 .offYellow, .goYellow{
     background-image: linear-gradient(#f5f5a5, #e0ab47);
     bottom: 0;
@@ -171,6 +183,8 @@ h4{
     transform: translateY(4px);
     background-image: linear-gradient(#fffdba, #fffa55);
 }
+
+/*Blue button x3 states*/
 
 .offBlue, .goBlue{
     background-image: linear-gradient(#a3ccf3, #38387b);
