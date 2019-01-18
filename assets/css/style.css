@@ -1,5 +1,3 @@
-
-
 body {
     height: 100%;
     background-image: url("/assets/images/marble.jpeg");
@@ -51,6 +49,11 @@ h4{
     border: 5px solid #000;
 }
 
+.btn-default:active:focus{
+    background-color: #b78981;
+    border-color: #000;
+}
+
 .btn-default:hover{
     color: #444040;
     background-color: #b78981;
@@ -61,6 +64,16 @@ h4{
     opacity:.9;
     padding: 10px;
     font-family: 'Bungee', cursive;
+}
+
+/* hand */
+
+#hand{
+    position: fixed;
+    right: 0;
+    top: 44%;
+    width: 30%;
+    height: auto;
 }
 
 /* game pad */
@@ -86,6 +99,16 @@ h4{
     border: 1px solid #000;
     cursor: pointer;
 }
+
+/* Adjustments for tablet and phone screen size*/
+
+@media (max-width: 991px){
+    #hand{
+        visibility: hidden;
+    }
+}
+
+/* Adjustments for phone screen size*/
 
 @media (max-width: 767px){
     .container{
