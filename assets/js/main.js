@@ -96,7 +96,7 @@ $(document).ready(function() {
  
  function winGame(){
      setTimeout(function(){
-        window.location.replace("/gameWin.html");
+        window.location.replace("/assets/gameWin.html");
      }, 500);
      /*
      winSound.play();

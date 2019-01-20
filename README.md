@@ -15,7 +15,7 @@ Built by **_Nicolas Truel_**
 
 > View of the game on an iphone6:
 
-![screen shot mobile size](/assets/images/screen_shot1.png)
+![screen shot mobile size](/assets/images/screen_shot1.png width="150px")
 
 > View of the game on an ipad:
 
