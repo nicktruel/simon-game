@@ -2,23 +2,11 @@ $(document).ready(function() {
 
 // Sound variables
 
-    var greenSound = document.createElement("audio");
-    greenSound.src = "assets/sounds/simonSound1.mp3";
-
-    var redSound = document.createElement("audio");
-    redSound.src = "assets/sounds/simonSound2.mp3";
-
-    var yellowSound = document.createElement("audio");
-    yellowSound.src = "assets/sounds/simonSound3.mp3";
-
-    var blueSound = document.createElement("audio");
-    blueSound.src = "assets/sounds/simonSound4.mp3";
-
-    var gameOver = document.createElement("audio");
-    gameOver.src = "assets/sounds/gameover.mp3";
-    
-    var winSound = document.createElement("audio");
-    winSound.src = "assets/sounds/youwin.mp3";
+    var greenSound = document.getElementById("greenSound");
+    var redSound = document.getElementById("redSound");
+    var yellowSound = document.getElementById("yellowSound");
+    var blueSound = document.getElementById("blueSound");
+    var gameOver = document.getElementById("gameOver");
 
 // Variables counting suites, user answers and rounds
 
@@ -28,16 +16,16 @@ $(document).ready(function() {
 
 // function when start button is pressed (buttons activate and game start)
 
- $("#start").click(function turnOn() {
-       $(".offGreen").removeClass("offGreen").addClass("green");
-       $(".offRed").removeClass("offRed").addClass("red");
-       $(".offYellow").removeClass("offYellow").addClass("yellow");
-       $(".offBlue").removeClass("offBlue").addClass("blue");
+ $('#start').click(function turnOn() {
+       $('.offGreen').removeClass('offGreen').addClass('green');
+       $('.offRed').removeClass('offRed').addClass('red');
+       $('.offYellow').removeClass('offYellow').addClass('yellow');
+       $('.offBlue').removeClass('offBlue').addClass('blue');
        suite = [];
        round = 0;
        playGame();
-       $(this).text("playing");
-       $("#message").text("");
+       $(this).text('playing');
+       $('#message').text('');
  });
  
 // PlayGame function, random loop generated, buttons flashing with loop
@@ -46,7 +34,7 @@ $(document).ready(function() {
      userAnswer = [];
      suite.push(Math.floor(Math.random() * 4) + 1);
      round += 1;
-     document.getElementById("count").innerHTML = round;
+     document.getElementById('count').innerHTML = round;
      for (var i = 0; i < 2; i++) {
         var buttonOn = suite[i];
             if(buttonOn == 1) {
@@ -88,8 +76,8 @@ $(document).ready(function() {
      suite = [];
      gameOver.play();
      greenSound.pause(), redSound.pause(), yellowSound.pause(), blueSound.pause();
-     $("#message").append("<h2>try again!!!</h2>");
-     $("#start").text("press to start");
+     $('#message').append('<h2>try again!!!</h2>');
+     $('#start').text('press to start');
  }
  
 // Win game function, redirects to gameWin page with slight delay
@@ -98,45 +86,38 @@ $(document).ready(function() {
      setTimeout(function(){
         window.location.replace("gameWin.html");
      }, 500);
-     /*
-     winSound.play();
-     activateGreen(), activateRed(), activateYellow(), activateBlue();
-     greenSound.pause(), redSound.pause(), yellowSound.pause(), blueSound.pause();
-     $("#message").append("<h2>you win!!!</h2>");
-     $("#start").text("play again");
-     */
  }
 
 // functions for 4 color buttons activated 
 
     function activateGreen() {
         greenSound.play();
-        $(".green").addClass("pressGreen"),
-        setTimeout(function eraseClass() { $(".green").removeClass("pressGreen") }, 150);
+        $('.green').addClass('pressGreen'),
+        setTimeout(function eraseClass() { $('.green').removeClass('pressGreen') }, 150);
     }
 
     function activateRed() {
         redSound.play();
-        $(".red").addClass("pressRed"), 
-        setTimeout(function eraseClass() { $(".red").removeClass("pressRed") }, 150);
+        $('.red').addClass('pressRed'), 
+        setTimeout(function eraseClass() { $('.red').removeClass('pressRed') }, 150);
     }
 
     function activateYellow() {
         yellowSound.play();
-        $(".yellow").addClass("pressYellow"),
-        setTimeout(function eraseClass() { $(".yellow").removeClass("pressYellow") }, 150);
+        $('.yellow').addClass('pressYellow'),
+        setTimeout(function eraseClass() { $('.yellow').removeClass('pressYellow') }, 150);
     }
 
     function activateBlue() {
         blueSound.play();
-        $(".blue").addClass("pressBlue"),
-        setTimeout(function eraseClass() { $(".blue").removeClass("pressBlue") }, 150);
+        $('.blue').addClass('pressBlue'),
+        setTimeout(function eraseClass() { $('.blue').removeClass('pressBlue') }, 150);
     }
 
 // Function for when game pad buttons are pressed
 
     $(function() {
-        $(".offGreen").mousedown(function() {
+        $('.offGreen').mousedown(function() {
             activateGreen();
             userAnswer.push(1);
             compareAnswer();
@@ -144,7 +125,7 @@ $(document).ready(function() {
     });
 
     $(function() {
-        $(".offRed").mousedown(function() {
+        $('.offRed').mousedown(function() {
             activateRed();
             userAnswer.push(2);
             compareAnswer();
@@ -152,7 +133,7 @@ $(document).ready(function() {
     });
 
     $(function() {
-        $(".offYellow").mousedown(function() {
+        $('.offYellow').mousedown(function() {
             activateYellow();
             userAnswer.push(3);
             compareAnswer();
@@ -160,7 +141,7 @@ $(document).ready(function() {
     });
 
     $(function() {
-        $(".offBlue").mousedown(function() {
+        $('.offBlue').mousedown(function() {
             activateBlue();
             userAnswer.push(4);
             compareAnswer();
