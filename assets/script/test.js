@@ -1,16 +1,23 @@
-
+/*function activateGreen() {
+    greenSound.play()
+    $('.green-button').addClass('pressGreen').removeClass('pressGreen');
+    
+} 
+*/
 
 /*
 function activateGreen() {
-    $('.offGreen').addClass('pressGreen');
-}
+        greenSound.play();
+        $('.green-button').addClass('pressGreen'),
+        setTimeout(function eraseClass() { $('.green').removeClass('pressGreen') }, 150);
+    }
 */
-/*
-function activateGreen(){
-    $('.').addClass('green');
-}
-*/
-
+    
 function turnOn() {
-    $('.green-button').removeClass('offGreen').addClass('green');
-} 
+    $('.offGreen').removeClass('offGreen').addClass('green');
+    $('.offRed').removeClass('offRed').addClass('red');
+    $('.offYellow').removeClass('offYellow').addClass('yellow');
+    $('.offBlue').removeClass('offBlue').addClass('blue');
+    $('#start').text('playing');
+    $('#message').text('');
+}
