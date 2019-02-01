@@ -20,4 +20,5 @@ function turnOn() {
     $('.offBlue').removeClass('offBlue').addClass('blue');
     $('#start').text('playing');
     $('#message').text('');
+    suite = [];
 }

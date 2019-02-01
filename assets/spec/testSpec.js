@@ -37,4 +37,10 @@ describe('turnOn function', function(){
         });
     });
     
+    describe('checks if an array is emty', function(){
+        it('should check the array suite is empty', function(){
+            expect(suite.length).toEqual(0);
+        });
+    });
+    
 });
