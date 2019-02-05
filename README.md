@@ -15,7 +15,7 @@ Built by **_Nicolas Truel_**
 
 > View of the game on an iphone6:
 
-![screen shot mobile size](/assets/images/screen_shot1.png width="150px")
+![screen shot mobile size](/assets/images/screen_shot1.png)
 
 > View of the game on an ipad:
 
@@ -87,7 +87,25 @@ The game was tested on different platforms:
  <dl>Google Chrome (Version 69.0.3497.100)
  <dl>Firefox (62.0.3)
  <dl>Explorer (42.17134.1.0)
+ <dt>Jasmine</dt>
+ <dl>Some of the functionalities were tested using Jasmine tool
+ <dl>Here is Jasmine boilerplate:
+ <dt>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.js"></script>
+    <script type="text/javascript" src="assets/lib/jasmine-jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.css" />
+    
+    <!-- Load scripts -->
+    <script type="text/javascript" src="assets/script/test.js"></script>
+    
+    <!-- Load Tests -->
+    <script type="text/javascript" src="assets/spec/testSpec.js"></script>
 </dl>
+
+
 
 ## Deployment
 

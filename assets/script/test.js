@@ -12,7 +12,9 @@ function activateGreen() {
         setTimeout(function eraseClass() { $('.green').removeClass('pressGreen') }, 150);
     }
 */
-    
+var suite = [];
+var round = 0;
+
 function turnOn() {
     $('.offGreen').removeClass('offGreen').addClass('green');
     $('.offRed').removeClass('offRed').addClass('red');
@@ -21,4 +23,5 @@ function turnOn() {
     $('#start').text('playing');
     $('#message').text('');
     suite = [];
+    round = 0;
 }

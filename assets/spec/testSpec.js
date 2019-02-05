@@ -43,4 +43,10 @@ describe('turnOn function', function(){
         });
     });
     
+    describe('checks if an variable is equal to 0', function(){
+        it('should check that var round is equal to 0', function(){
+            expect('round').toBeDefined();
+        });
+    });
+    
 });
