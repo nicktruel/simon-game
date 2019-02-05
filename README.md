@@ -6,12 +6,14 @@ Built by **_Nicolas Truel_**
 
 > Links to a [video](https://www.youtube.com/watch?v=1Yqj76Q4jJ4) and the [wikipedia page](https://en.wikipedia.org/wiki/Simon_(game)) of the original game here.
 
+>[Simon Game](https://simon-game-nicktruel.c9users.io/index.html) (Play it here)
+
 ## UX
 > The goal of this project is to produce a functional game with _Javascript_, as well as utilising the ealier skills learned such as _HTML_ and _CSS_.
 
 > The user should be able to enjoy the game on any device. The contrast between the colors of the pad should be clear and the sounds associated to each color will help the user remember the series proposed by the computer.
 
-[Simon Game](https://simon-game-nicktruel.c9users.io/index.html) (Play it here)
+
 
 > View of the game on an iphone6:
 
