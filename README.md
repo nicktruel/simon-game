@@ -108,11 +108,11 @@ The game was tested on different platforms:
 
 
 ## Deployment
+The code, (built in [Cloud9](https://ide.c9.io/nicktruel/simon_game)) is pushed to a remote repository on GitHub and the site is published on  [GitHub pages](https://nicktruel.github.io/simon-game/).
 
 ## Credits
 
 #### Content
+This game is inspired by the _Simon Game_ from 1978. The design of the pad, the colors of the buttons, the sounds of the buttons on the pad when pressed and the logic of the game are all been inspired by the original version of the game:
 
-#### Media
-
-#### Acknowledgements
+![original simon game](/assets/images/simon-original.jpg)
