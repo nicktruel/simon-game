@@ -32,7 +32,7 @@ Built by **_Nicolas Truel_**
 
 ## Features
 
-* The game has a "Rules" button explaining to the user how to play the game.
+* The page has a "Rules" button explaining to the user how to play the game.
 * A "Press to start" button acts as an on switch, and start the first serie.
 * The "Game Pad" is composed of 4 different colored buttons with a different sound each.
 * Each button has three different shades of colors. The dim one is set when the game is off (before the user clicks on the start button). The brighter one is set when the game is on-going. And the brightest one is activated when the button is pressed (either by the computer or the user).
@@ -214,3 +214,11 @@ The code, (built in [Cloud9](https://ide.c9.io/nicktruel/simon_game)) is pushed 
 This game is inspired by the _Simon Game_ from 1978. The design of the pad, the colors of the buttons, the sounds of the buttons on the pad when pressed and the logic of the game are all been inspired by the original version of the game:
 
 ![original simon game](/assets/images/simon-original.jpg)
+
+#### Media
+* The "You win!" and "Game over!" sounds were downloaded from [zapsplat.com](https://www.zapsplat.com/).
+* The rules are a copy of the original ones taken from [Wikipedia](https://en.wikipedia.org/wiki/Simon_(game)).
+ 
+#### Acknowledgements
+This game was of course intended to resemble the original Simon Game.
+A lot of researches were made on the web and websites such as w3Schools.com, github.com, Codepen.io, youtube.com and of course the slack chatroom were great help to achieve the final result.
