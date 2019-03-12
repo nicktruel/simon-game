@@ -100,7 +100,7 @@ h4{
     cursor: pointer;
 }
 
-/* Adjustments for tablet and phone screen size*/
+/* Adjustments for tablet and phone screen size (hidding hand)*/
 
 @media (max-width: 991px){
     #hand{

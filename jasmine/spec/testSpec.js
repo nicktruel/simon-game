@@ -48,5 +48,25 @@ describe('turnOn function', function(){
             expect('round').toBeDefined();
         });
     });
-    
 });
+
+
+describe('compareAnswer function', function(){
+    describe('check if an array is empty', function(){
+        it('should check if userAnswer is empty', function(){
+            expect(userAnswer.length).toEqual(0);
+        });
+    });
+    
+    describe('checks if a function was called', function(){
+        it('should check that looseGame function was called', function(){
+            spyOn(window, 'looseGame');
+            compareAnswer();
+            expect(window.looseGame).toHaveBeenCalled();
+        });
+    });
+});
+
+
+
+

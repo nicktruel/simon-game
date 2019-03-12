@@ -6,7 +6,7 @@ Built by **_Nicolas Truel_**
 
 > Links to a [video](https://www.youtube.com/watch?v=1Yqj76Q4jJ4) and the [wikipedia page](https://en.wikipedia.org/wiki/Simon_(game)) of the original game here.
 
->[Simon Game](https://simon-game-nicktruel.c9users.io/index.html) (Play it here)
+>[Simon Game](https://nicktruel.github.io/simon-game/) (Play it here)
 
 ## UX
 > The goal of this project is to produce a functional game with _Javascript_, as well as utilising the ealier skills learned such as _HTML_ and _CSS_.
@@ -22,6 +22,11 @@ Built by **_Nicolas Truel_**
 > View of the game on an ipad:
 
 ![screen shot tablet size](/assets/images/screen_shot2.png)
+
+> View of the game on large screen:
+
+![screen shot large screen](/assets/images/screen_shot3.png)
+
 
 > First drawing of the project:  [wireframe](/assets/images/simon-wireframe.png)
 
@@ -67,6 +72,97 @@ The technologies used to create this game are:
   
   [https://pencil.evolus.vn/](https://pencil.evolus.vn/)
 </dl>
+    
+> function for green color button activated:
+
+    function activateGreen() {
+        greenSound.play();
+        $('.green').addClass('pressGreen'),
+        setTimeout(function eraseClass() { $('.green').removeClass('pressGreen') }, 150);
+    };
+    
+> Function for when green game pad button is pressed:
+
+    $(function() {
+        $('.offGreen').mousedown(function() {
+            activateGreen();
+            userAnswer.push(1);
+            compareAnswer();
+        });
+    });
+   
+> function that compares output from computer with input from user:
+
+    function compareAnswer() {
+        var currentAnswerIndex = userAnswer.length - 1;
+        var currentAnswer = userAnswer[currentAnswerIndex];
+     
+        if (currentAnswer != suite[currentAnswerIndex]) {
+            looseGame();
+        }
+        if (currentAnswerIndex == suite.length - 1) {
+            playGame();
+        }
+        if (suite.length == 3) {
+            winGame();
+        };
+    };
+
+> function that creates random suite:
+
+    function playGame() {
+         userAnswer = [];
+         suite.push(Math.floor(Math.random() * 4) + 1);
+         round += 1;
+         document.getElementById('count').innerHTML = round;
+         for (var i = 0; i < 2; i++) {
+            var buttonOn = suite[i];
+                if(buttonOn == 1) {
+                    setTimeout(function (){activateGreen()}, 1000 * (i + 1));
+                }
+                if(buttonOn == 2) {
+                    setTimeout(function (){activateRed()}, 1000 * (i + 1));
+                }
+                if(buttonOn == 3) {
+                    setTimeout(function (){activateYellow()}, 1000 * (i + 1));
+                }
+                if(buttonOn == 4) {
+                    setTimeout(function (){activateBlue()}, 1000 * (i + 1));
+                }
+         }
+     }
+     
+> function that starts the game:
+
+    $('#start').click(function turnOn() {
+        $('.offGreen').removeClass('offGreen').addClass('green');
+        $('.offRed').removeClass('offRed').addClass('red');
+        $('.offYellow').removeClass('offYellow').addClass('yellow');
+        $('.offBlue').removeClass('offBlue').addClass('blue');
+        suite = [];
+        round = 0;
+        playGame();
+        $(this).text('playing');
+        $('#message').text('');
+    });
+
+> function when game is lost:
+
+     function looseGame(){
+        suite = [];
+        gameOver.play();
+        greenSound.pause(), redSound.pause(), yellowSound.pause(), blueSound.pause();
+        $('#message').append('<h2>try again!!!</h2>');
+        $('#start').text('press to start');
+     };
+ 
+> function when game is won:
+ 
+     function winGame(){
+         setTimeout(function(){
+            window.location.replace("gameWin.html");
+         }, 500);
+     };
 
 ## Testing
 Tools used to verify codes:
