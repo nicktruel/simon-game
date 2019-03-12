@@ -27,12 +27,10 @@ describe('turnOn function', function(){
     describe('change text of an html element', function(){
         
         it('should change the text on the start button to "playing"', function(){
-            turnOn();
             expect($('#start').text).toContainText('playing');
         });
         
         it('should empty #message element of any text', function(){
-            turnOn();
             expect($('#message').text).toContainText('');
         });
     });
@@ -45,7 +43,7 @@ describe('turnOn function', function(){
     
     describe('checks if an variable is equal to 0', function(){
         it('should check that var round is equal to 0', function(){
-            expect('round').toBeDefined();
+            expect(round).toBeDefined();
         });
     });
 });
