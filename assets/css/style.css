@@ -1,11 +1,12 @@
 body {
     height: 100%;
-    background-image: url("simon_game/assets/images/marble.jpeg");
+    background-image: url("../images/marble.jpeg");
     background-size: cover;
     background-repeat: repeat-y;
     margin: 0;
     padding: 0;
 }
+
 
 h1 {
     margin: 0;
