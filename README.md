@@ -206,7 +206,7 @@ The game was tested on different platforms:
 
 
 ## Deployment
-The code, (built in [Cloud9](https://ide.c9.io/nicktruel/simon_game)) is pushed to a remote repository on GitHub and the site is published on  [GitHub pages](https://nicktruel.github.io/simon-game/).
+The code, (built in [Cloud9](https://ide.c9.io/nicktruel/simon_game)) is pushed to a remote repository on GitHub and the site is published on GitHub pages.
 
 ## Credits
 

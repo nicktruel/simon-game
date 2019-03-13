@@ -13,7 +13,6 @@ function turnOn() {
 }
 
 
-
 var userAnswer = [];
 
 function compareAnswer() {
@@ -24,12 +23,6 @@ function compareAnswer() {
      if (currentAnswer != suite[currentAnswerIndex]) {
          looseGame();
      }
-    /* if (currentAnswerIndex == suite.length - 1) {
-         playGame();
-     }
-     if (suite.length == 3) {
-         winGame();
-     }  */
  }
  
  
