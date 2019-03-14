@@ -8,7 +8,23 @@ Built by **_Nicolas Truel_**
 
 >[Simon Game](https://nicktruel.github.io/simon-game/) (Play it here)
 
-## UX
+#### Table of content
+1. [UX](#UX)
+2. [Features](#Features)
+3. [Technologies](#Technologies)
+4. [Testing](#Testing)
+    1. [Android](#Android)
+    2. [IOS](#IOS)
+    3. [Browsers](#Browsers)
+    4. [Jasmine](#Jasmine)
+    5. [Bugs](#Bugs)
+5. [Deployment](#Deployment)
+6. [Credits](#Credits)
+    1. [Content](#Content)
+    2. [Media](#Media)
+    3. [Acknowledgements](#Acknowledgements)
+
+## UX <a name="UX"></a>
 > The goal of this project is to produce a functional game with _Javascript_, as well as utilising the ealier skills learned such as _HTML_ and _CSS_.
 
 > The user should be able to enjoy the game on any device. The contrast between the colors of the pad should be clear and the sounds associated to each color will help the user remember the series proposed by the computer.
@@ -30,7 +46,7 @@ Built by **_Nicolas Truel_**
 
 > First drawing of the project:  [wireframe](/assets/images/simon-wireframe.png)
 
-## Features
+## Features <a name="Features"></a>
 
 * The page has a "Rules" button explaining to the user how to play the game.
 * A "Press to start" button acts as an on switch, and start the first serie.
@@ -47,7 +63,8 @@ Built by **_Nicolas Truel_**
 ___
 A strict version of the game will be added shortly, enabling the user to re-start at the previous round when inputing a wrong answer (As opposed to restarting from round 1 at the moment).
 
-## Technologies
+## Technologies <a name="Technologies"></a>
+
 The technologies used to create this game are:
 <dl>
   <dt>HTML5 (the layout of the page)</dt>
@@ -164,7 +181,8 @@ The technologies used to create this game are:
          }, 500);
      };
 
-## Testing
+## Testing <a name="Testing"></a>
+
 Tools used to verify codes:
 * W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/)
 * W3C Markup Validation Service (https://validator.w3.org/)
@@ -172,20 +190,20 @@ Tools used to verify codes:
 
 The game was tested on different platforms:
 <dl>
- <dt>Android</dt>
+ <dt>Android <a name="Android"></a></dt>
  <dl>Samsung Galaxy A3
  <dl>Samsung Galaxy J5
  <dl>Samsung Galaxy TAB A
  <dl>Huawei P20 Lite
- <dt>IOS</dt>
+ <dt>IOS <a name="IOS"></a></dt>
  <dl>Iphone 5s
  <dl>Iphone 6
  <dl>Macbook
- <dt>Browsers</dt>
+ <dt>Browsers <a name="Browsers"></a></dt>
  <dl>Google Chrome (Version 69.0.3497.100)
  <dl>Firefox (62.0.3)
  <dl>Explorer (42.17134.1.0)
- <dt>Jasmine</dt>
+ <dt>Jasmine <a name="Jasmine"></a></dt>
  <dl>Some of the functionalities were tested using Jasmine tool
  <dl>Here is Jasmine boilerplate:
  <dt>
@@ -203,22 +221,43 @@ The game was tested on different platforms:
     <script type="text/javascript" src="assets/spec/testSpec.js"></script>
 </dl>
 
+ <dt>Bugs <a name="Bugs"></a></dt>
+ 
+ <u>_fixed_</u>:    
+ Couldn't get the playGame loop to stop when the game was won.After reaching the 10th round, a funtion was activating the youwin.mp3 but another suite was generated at the same time.
+ My fix (with tutor's help) was to redirect the game to a different html page (gameWin.html) before a new suite was created (hence the 500ms delay compared to 1000ms to activate a new color) with:
+ 
+    function winGame(){
+     setTimeout(function(){
+        window.location.replace("gameWin.html");
+     }, 500);
+        
+    }
+ 
+ 
+ 
+ <u>_Unfixed_</u>:  
+ If a color is pressed before the start button is activated the game will go into gameOver mode and the game over sound and display will be heard and shown (to be fixed shortly).
 
+## Deployment <a name="Deployment"></a>
 
-## Deployment
-The code, (built in [Cloud9](https://ide.c9.io/nicktruel/simon_game)) is pushed to a remote repository on GitHub and the site is published on GitHub pages.
+The code, (built in [Cloud9](https://ide.c9.io/nicktruel/simon_game)) is pushed to a remote repository on GitHub and the site is published on GitHub pages (https://nicktruel.github.io/simon-game/).
 
-## Credits
+GitHub Pages site is built from the master branch.
 
-#### Content
+All tests were re-performed on the final deployed version.
+
+## Credits <a name="Credits"></a>
+
+#### Content <a name="Content"></a>
 This game is inspired by the _Simon Game_ from 1978. The design of the pad, the colors of the buttons, the sounds of the buttons on the pad when pressed and the logic of the game are all been inspired by the original version of the game:
 
 ![original simon game](/assets/images/simon-original.jpg)
 
-#### Media
+#### Media <a name="Media"></a>
 * The "You win!" and "Game over!" sounds were downloaded from [zapsplat.com](https://www.zapsplat.com/).
 * The rules are a copy of the original ones taken from [Wikipedia](https://en.wikipedia.org/wiki/Simon_(game)).
- 
-#### Acknowledgements
+
+#### Acknowledgements <a name="Acknowledgements"></a>
 This game was of course intended to resemble the original Simon Game.
-A lot of researches were made on the web and websites such as w3Schools.com, github.com, Codepen.io, youtube.com and of course the slack chatroom were great help to achieve the final result.
+A lot of researches were made on the web and websites such as w3Schools.com, github.com, Codepen.io, stackoverflow.com, youtube.com and of course the slack chatroom were great help to achieve the final result.
